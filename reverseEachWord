@@ -1,0 +1,21 @@
+public static String reverseEachWord(String str) {
+		StringBuilder ans=new StringBuilder();
+        int wordStart=0;
+
+        for(int i=0; i<=str.length(); i++){
+
+            if(i == str.length() || str.charAt(i) == ' '){
+                for(int j=i-1; j>=wordStart; j--){
+
+                    ans.append(str.charAt(j));
+                }
+
+                if(i!= str.length()){
+                    ans.append(' ');
+                }
+            wordStart=i+1;
+            }
+
+        }
+        return ans.toString();
+	}
